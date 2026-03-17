@@ -22,9 +22,21 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 12% 18%, rgba(37, 99, 235, 0.18), transparent 30%),
-    radial-gradient(circle at 88% 22%, rgba(245, 158, 11, 0.2), transparent 28%),
-    radial-gradient(circle at 50% 88%, rgba(22, 163, 74, 0.16), transparent 32%),
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(37, 99, 235, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 22%,
+      rgba(245, 158, 11, 0.2),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 50% 88%,
+      rgba(22, 163, 74, 0.16),
+      transparent 32%
+    ),
     linear-gradient(160deg, #ddeafe 0%, #ffe9d2 52%, #dff7e8 100%);
 }
 
@@ -39,7 +51,11 @@ body {
 .hero-card,
 .places-header,
 .slide-card {
-  background: linear-gradient(145deg, rgba(236, 246, 255, 0.95), rgba(255, 242, 225, 0.95));
+  background: linear-gradient(
+    145deg,
+    rgba(236, 246, 255, 0.95),
+    rgba(255, 242, 225, 0.95)
+  );
   border-radius: 20px;
   border: 1px solid rgba(147, 197, 253, 0.55);
   box-shadow: 0 14px 34px rgba(30, 41, 59, 0.16);
@@ -49,7 +65,11 @@ body {
 .hero-card {
   width: min(760px, 100%);
   padding: 34px;
-  background-image: linear-gradient(135deg, rgba(232, 244, 255, 0.95) 0%, rgba(255, 236, 208, 0.95) 100%);
+  background-image: linear-gradient(
+    135deg,
+    rgba(232, 244, 255, 0.95) 0%,
+    rgba(255, 236, 208, 0.95) 100%
+  );
   text-align: center;
 }
 
@@ -147,7 +167,11 @@ h1 {
 .places-header {
   width: min(980px, 100%);
   padding: 22px;
-  background-image: linear-gradient(135deg, rgba(225, 240, 255, 0.95) 0%, rgba(226, 248, 236, 0.95) 100%);
+  background-image: linear-gradient(
+    135deg,
+    rgba(225, 240, 255, 0.95) 0%,
+    rgba(226, 248, 236, 0.95) 100%
+  );
 }
 
 .places-header h1 {
@@ -186,7 +210,11 @@ h1 {
 
 .slide-card {
   overflow: hidden;
-  background-image: linear-gradient(180deg, rgba(232, 245, 255, 0.97) 0%, rgba(255, 239, 220, 0.97) 100%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(232, 245, 255, 0.97) 0%,
+    rgba(255, 239, 220, 0.97) 100%
+  );
 }
 
 .slide-image {
