@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg-top: #eef6ff;
   --bg-mid: #fff4e8;
   --bg-bottom: #edf9f1;
@@ -38,6 +38,73 @@ body {
       transparent 32%
     ),
     linear-gradient(160deg, #ddeafe 0%, #ffe9d2 52%, #dff7e8 100%);
+}
+body.home {
+  position: relative;
+  background: url("spring-bg.png") center / cover no-repeat fixed;
+}
+
+body.home::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 18% 22%,
+      rgba(255, 255, 255, 0.55),
+      rgba(255, 255, 255, 0.08) 42%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 82% 16%,
+      rgba(255, 230, 240, 0.4),
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.28),
+      rgba(255, 255, 255, 0.12)
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.home .hero-page {
+  position: relative;
+  z-index: 1;
+}
+
+body.home .places-page {
+  position: relative;
+  z-index: 1;
+}
+
+body.home .hero-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 18px 50px rgba(15, 23, 42, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.25) inset;
+  backdrop-filter: blur(10px) saturate(120%);
+}
+
+body.home .eyebrow {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 240, 246, 0.7)
+  );
+  color: rgba(30, 64, 175, 0.92);
+}
+
+body.home .primary-btn {
+  background: linear-gradient(90deg, #db2777, #2563eb);
+  box-shadow: 0 10px 22px rgba(219, 39, 119, 0.22);
+}
+
+body.home .route-map {
+  background: rgba(255, 255, 255, 0.66);
+  border-color: rgba(255, 255, 255, 0.65);
 }
 
 .hero-page,
@@ -203,9 +270,8 @@ h1 {
   color: #1e3a8a;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.14);
   position: sticky;
-  top: 24px;
+  top: calc(50vh - 26px);
   z-index: 2;
-  align-self: start;
 }
 
 .slide-card {
@@ -219,8 +285,10 @@ h1 {
 
 .slide-image {
   width: 100%;
-  aspect-ratio: 16 / 8;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  background: rgba(255, 255, 255, 0.55);
   display: block;
 }
 
@@ -262,6 +330,7 @@ h1 {
 .slide-location {
   margin: 0 0 14px;
   color: var(--muted);
+  white-space: pre-line;
 }
 
 .slide-story {
@@ -269,16 +338,14 @@ h1 {
   gap: 12px;
 }
 
-.slide-story p,
-.slide-detail-item {
-  margin: 0;
-  line-height: 1.7;
+.slide-text {
+  display: grid;
+  gap: 12px;
 }
 
-.slide-details {
-  display: grid;
-  gap: 10px;
-  color: #334155;
+.slide-text-item {
+  margin: 0;
+  line-height: 1.7;
 }
 
 @media (max-width: 760px) {
@@ -300,5 +367,9 @@ h1 {
     width: 48px;
     height: 48px;
     border-radius: 16px;
+  }
+
+  .slide-image {
+    height: auto;
   }
 }
